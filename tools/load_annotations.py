@@ -3,10 +3,10 @@ import pickle
 
 
 def load_annotations(annotation_dir):
-    with open(os.path.join(annotation_dir, 'object_bbox_and_relationship.pkl'), 'r') as f:
+    with open(os.path.join(annotation_dir, 'object_bbox_and_relationship.pkl'), 'rb') as f:
         object_anno = pickle.load(f)
 
-    with open(os.path.join(annotation_dir, 'person_bbox.pkl'), 'r') as f:
+    with open(os.path.join(annotation_dir, 'person_bbox.pkl'), 'rb') as f:
         person_anno = pickle.load(f)
 
     frame_list = []
